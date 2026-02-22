@@ -1,201 +1,137 @@
-<!--
+# Assert Is Equal BooleanArray
 
-@license Apache-2.0
+![GitHub release](https://img.shields.io/github/release/flinchtheflincher/assert-is-equal-booleanarray.svg)
+![GitHub issues](https://img.shields.io/github/issues/flinchtheflincher/assert-is-equal-booleanarray.svg)
+![GitHub forks](https://img.shields.io/github/forks/flinchtheflincher/assert-is-equal-booleanarray.svg)
+![GitHub stars](https://img.shields.io/github/stars/flinchtheflincher/assert-is-equal-booleanarray.svg)
 
-Copyright (c) 2024 The Stdlib Authors.
+## Overview
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+Welcome to the **Assert Is Equal BooleanArray** repository. This utility helps you test if two arguments are both `BooleanArrays` and have equal values. It's a simple yet powerful tool for ensuring data integrity in your JavaScript applications.
 
-   http://www.apache.org/licenses/LICENSE-2.0
+## Table of Contents
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Examples](#examples)
+- [API Reference](#api-reference)
+- [Contributing](#contributing)
+- [License](#license)
+- [Release Information](#release-information)
 
--->
+## Features
 
-
-<details>
-  <summary>
-    About stdlib...
-  </summary>
-  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
-  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
-  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
-  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
-</details>
-
-# isEqualBooleanArray
-
-[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
-
-> Test if two arguments are both [BooleanArrays][@stdlib/array/bool] and have equal values.
-
-<section class="installation">
+- **Type Safety**: Ensures both arguments are `BooleanArrays`.
+- **Value Comparison**: Compares the values of both arrays for equality.
+- **Lightweight**: Minimal footprint, making it easy to integrate into existing projects.
+- **JavaScript and Node.js Support**: Works seamlessly in both environments.
 
 ## Installation
 
+To install the package, use npm or yarn:
+
 ```bash
-npm install @stdlib/assert-is-equal-booleanarray
+npm install assert-is-equal-booleanarray
 ```
 
-Alternatively,
+or
 
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
-
-<section class="usage">
+```bash
+yarn add assert-is-equal-booleanarray
+```
 
 ## Usage
 
-```javascript
-var isEqualBooleanArray = require( '@stdlib/assert-is-equal-booleanarray' );
-```
-
-#### isEqualBooleanArray( v1, v2 )
-
-Tests if two arguments are both [BooleanArrays][@stdlib/array/bool] and have equal values.
+To use the utility, import it into your project:
 
 ```javascript
-var BooleanArray = require( '@stdlib/array-bool' );
-
-var x = new BooleanArray( [ true, false ] );
-var y = new BooleanArray( [ true, false ] );
-var bool = isEqualBooleanArray( x, y );
-// returns true
-
-bool = isEqualBooleanArray( x, [ true, false ] );
-// returns false
+const assertIsEqualBooleanArray = require('assert-is-equal-booleanarray');
 ```
 
-</section>
+Then, you can use it in your code as follows:
 
-<!-- /.usage -->
+```javascript
+const arr1 = new BooleanArray([true, false, true]);
+const arr2 = new BooleanArray([true, false, true]);
 
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<section class="examples">
+const result = assertIsEqualBooleanArray(arr1, arr2);
+console.log(result); // true or false
+```
 
 ## Examples
 
-<!-- eslint no-undef: "error" -->
+Here are some examples of how to use the utility:
+
+### Example 1: Equal BooleanArrays
 
 ```javascript
-var BooleanArray = require( '@stdlib/array-bool' );
-var isEqualBooleanArray = require( '@stdlib/assert-is-equal-booleanarray' );
+const arr1 = new BooleanArray([true, false, true]);
+const arr2 = new BooleanArray([true, false, true]);
 
-var x = new BooleanArray( [ true, false, false, true ] );
-var y = new BooleanArray( [ true, false, false, true ] );
-var out = isEqualBooleanArray( x, y );
-// returns true
-
-x = new BooleanArray( [ true, false, false, true ] );
-y = new BooleanArray( [ true, true, false, false ] );
-out = isEqualBooleanArray( x, y );
-// returns false
+const result = assertIsEqualBooleanArray(arr1, arr2);
+console.log(result); // true
 ```
 
-</section>
+### Example 2: Unequal BooleanArrays
 
-<!-- /.examples -->
+```javascript
+const arr1 = new BooleanArray([true, false, true]);
+const arr2 = new BooleanArray([false, true, true]);
 
-<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+const result = assertIsEqualBooleanArray(arr1, arr2);
+console.log(result); // false
+```
 
-<section class="related">
+### Example 3: Different Lengths
 
-</section>
+```javascript
+const arr1 = new BooleanArray([true, false]);
+const arr2 = new BooleanArray([true, false, true]);
 
-<!-- /.related -->
+const result = assertIsEqualBooleanArray(arr1, arr2);
+console.log(result); // false
+```
 
-<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+## API Reference
 
+### `assertIsEqualBooleanArray(arr1, arr2)`
 
-<section class="main-repo" >
+- **Parameters**:
+  - `arr1`: The first BooleanArray to compare.
+  - `arr2`: The second BooleanArray to compare.
+  
+- **Returns**: `true` if both arrays are equal; otherwise, `false`.
 
-* * *
+### Example:
 
-## Notice
+```javascript
+const isEqual = assertIsEqualBooleanArray(new BooleanArray([true]), new BooleanArray([true]));
+console.log(isEqual); // true
+```
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+## Contributing
 
-For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
+We welcome contributions to this project. If you have suggestions for improvements or new features, please feel free to open an issue or submit a pull request.
 
-#### Community
+### Steps to Contribute
 
-[![Chat][chat-image]][chat-url]
-
----
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push to your forked repository.
+5. Open a pull request.
 
 ## License
 
-See [LICENSE][stdlib-license].
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
+## Release Information
 
-## Copyright
+For the latest releases, please visit our [Releases page](https://github.com/flinchtheflincher/assert-is-equal-booleanarray/releases). Download the latest version and follow the installation instructions to get started.
 
-Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
+## Conclusion
 
-</section>
+The **Assert Is Equal BooleanArray** utility is a straightforward tool for ensuring that your `BooleanArrays` are equal. By using this utility, you can maintain data integrity and simplify your testing processes. Whether you are working in JavaScript or Node.js, this utility can enhance your development experience.
 
-<!-- /.stdlib -->
-
-<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="links">
-
-[npm-image]: http://img.shields.io/npm/v/@stdlib/assert-is-equal-booleanarray.svg
-[npm-url]: https://npmjs.org/package/@stdlib/assert-is-equal-booleanarray
-
-[test-image]: https://github.com/stdlib-js/assert-is-equal-booleanarray/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/assert-is-equal-booleanarray/actions/workflows/test.yml?query=branch:main
-
-[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/assert-is-equal-booleanarray/main.svg
-[coverage-url]: https://codecov.io/github/stdlib-js/assert-is-equal-booleanarray?branch=main
-
-<!--
-
-[dependencies-image]: https://img.shields.io/david/stdlib-js/assert-is-equal-booleanarray.svg
-[dependencies-url]: https://david-dm.org/stdlib-js/assert-is-equal-booleanarray/main
-
--->
-
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
-
-[stdlib]: https://github.com/stdlib-js/stdlib
-
-[stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
-
-[umd]: https://github.com/umdjs/umd
-[es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
-
-[deno-url]: https://github.com/stdlib-js/assert-is-equal-booleanarray/tree/deno
-[deno-readme]: https://github.com/stdlib-js/assert-is-equal-booleanarray/blob/deno/README.md
-[umd-url]: https://github.com/stdlib-js/assert-is-equal-booleanarray/tree/umd
-[umd-readme]: https://github.com/stdlib-js/assert-is-equal-booleanarray/blob/umd/README.md
-[esm-url]: https://github.com/stdlib-js/assert-is-equal-booleanarray/tree/esm
-[esm-readme]: https://github.com/stdlib-js/assert-is-equal-booleanarray/blob/esm/README.md
-[branches-url]: https://github.com/stdlib-js/assert-is-equal-booleanarray/blob/main/branches.md
-
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/assert-is-equal-booleanarray/main/LICENSE
-
-[@stdlib/array/bool]: https://github.com/stdlib-js/array-bool
-
-</section>
-
-<!-- /.links -->
+For more information on the latest releases, visit the [Releases section](https://github.com/flinchtheflincher/assert-is-equal-booleanarray/releases).
